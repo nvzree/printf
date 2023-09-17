@@ -1,2 +1,1 @@
-# printf
-Custom C Printf function implementation
+ Printf Project
