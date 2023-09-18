@@ -9,36 +9,36 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int num_printed = 0;
+	int i;
 
 	if (format == NULL) /* validating format */
 		return (-1);
 
 	va_start(args, format);
 
-	while (*format) /* iterate through the characters of format */
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (*format != '%') /* if format is not % */
+		if (format[i] != '%') /* if format is not % */
 		{
-			_putchar(*format);
+			_putchar(format[i]);
 			num_printed++;
 		}
 		else /* if format is % */
 		{
 			format++; /* move to the next charctern*/
-			if (*format == '\0')
+			if (format[i] == '\0')
 			{
 				break;
 			}
-			if (*format == 'c' || *format == 's' || *format == 'd')
+			if (format[i] == 'c' || format[i] == 's' || format[i] == 'd')
 			{
-				num_printed += get_func(*format)(args);
+				num_printed += get_func(format[i])(args);
 			}
 			else
 			{
 				num_printed += _putchar('%');
 			}
 		}
-		format++;
 	}
 	va_end(args);
 	return (num_printed);
