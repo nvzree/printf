@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - function that produces output according to a format
  * @format: character string. composed of zero or more directives
@@ -27,14 +26,12 @@ int _printf(const char *format, ...)
 		{
 			format++; /* move to the next charctern*/
 			if (format[i] == '\0')
-			{
 				break;
-			}
 			if (format[i] == 'c' || format[i] == 's' || format[i] == 'd')
 			{
 				num_printed += get_func(format[i])(args);
 			}
-			else if ( format[i] == 'i')
+			else if (format[i] == 'i')
 			{
 				num_printed += get_func(format[i])(args);
 			}
@@ -43,9 +40,7 @@ int _printf(const char *format, ...)
 				num_printed += _putchar(format[i]);
 			}
 			else
-			{
 				num_printed += _putchar('%');
-			}
 		}
 	}
 	va_end(args);
