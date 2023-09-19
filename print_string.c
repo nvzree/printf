@@ -12,7 +12,9 @@ int print_s(va_list args)
 	char *s = va_arg(args, char*);
 
 	if (s == NULL)
-		return (-1);
+	{
+		s = "(null)";
+	}
 	while (*s)
 	{
 		_putchar(*s);
