@@ -9,6 +9,7 @@
 int _putchar(char c);
 int _putnum(long num, int count);
 int (*get_func(char str))(va_list arg);
+int get_precision(const char *format, int *i, va_list list);
 
 
 /* printf functions */
