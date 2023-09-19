@@ -34,6 +34,10 @@ int _printf(const char *format, ...)
 			{
 				num_printed += get_func(format[i])(args);
 			}
+			else if ( format[i] == 'i')
+			{
+				num_printed += get_func(format[i])(args);
+			}
 			else if (format[i] == '%')
 			{
 				num_printed += _putchar(format[i]);

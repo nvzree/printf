@@ -20,6 +20,10 @@ int (*get_func(char str)) (va_list arg)
 	{
 		return (&print_d);
 	}
+	else if (str == 'i')
+	{
+		return (&print_d);
+	}
 
 	return (0);
 }
