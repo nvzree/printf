@@ -17,9 +17,15 @@ int print_s(va_list args)
 	}
 	while (*s)
 	{
+		/**
+		 * Print each character of the string
+		 * Increment the character count
+		 * Move to the next character in the string
+		 */
 		_putchar(*s);
 		count++;
 		s++;
 	}
+	/*Return the total count of characters printed*/
 	return (count);
 }
