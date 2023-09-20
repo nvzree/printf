@@ -3,8 +3,8 @@
 /**
  * _putnum -  writes integer n to stdout
  * @num: integer to print to stdout
- * @count: count of num printed
- * Return: count
+ * @count: count of num printed so far
+ * Return: he updated count of characters printed
  */
 
 int _putnum(long num, int count)
@@ -19,8 +19,8 @@ int _putnum(long num, int count)
 	{
 		count = _putnum(num / 10, count);
 	}
-
+/*Print the last digit as a character*/
 	_putchar(num % 10 + '0');
-
+/*Increment the count for the printed digit and return it*/
 	return (count + 1);
 }
