@@ -17,5 +17,5 @@ int _printf(const char *format, ...);
 int print_c(va_list args);
 int print_s(va_list args);
 int print_d(va_list args);
-int get_width(const char *format, int *i, va_list list);
+
 #endif
