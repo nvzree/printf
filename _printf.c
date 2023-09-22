@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			{
 				num_printed += get_func(format[i])(args);
 			}
-			else if (format[i] == 'i')
+			else if (format[i] == 'i' || format[i] == 'b')
 			{
 				num_printed += get_func(format[i])(args);
 			}
