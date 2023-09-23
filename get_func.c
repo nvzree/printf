@@ -30,6 +30,10 @@ int (*get_func(char str)) (va_list arg)
 	{
 		return (&print_d);
 	}
+	else if (str == 'b')
+	{
+		return (&print_b);
+	}
 	/*If no valid format specifier is found, return NULL*/
 
 	return (0);
